@@ -1,0 +1,49 @@
+<!-- script_23 -->
+<!-- 객체 프로퍼티와 메소드 -->
+<!-- /*  */ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <style>
+    </style>
+  </head>
+  <body>
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script>
+      var coworkers = {
+        "programmer":"유재석",
+        "designer":"박명수"
+      };
+      document.write("programmer : "+coworkers.programmer+"<br>");
+      document.write("designer : "+coworkers.designer+"<br>");
+      coworkers.bookkeeper = "정형돈";
+      document.write("bookkeeper : "+coworkers.bookkeeper+"<br>");
+      coworkers["data scientist"] = "노홍철";
+      document.write("data scientist : "+coworkers["data scientist"]+"<br>");
+    </script>
+    <h2>Iterate</h2>
+    <script>
+      for(var key in coworkers) {
+        document.write(key+' : '+coworkers[key]+'<br>');
+      }
+    </script>
+    <h2>Property & Method</h2>
+    <script>
+      // function showAll(){}
+      // var showAll = function(){}
+      coworkers.showAll = function(){
+        for(var key in coworkers) {
+          // document.write(key+' : '+coworkers[key]+'<br>');
+          // this 로 객체가 변하더라도 관계없음
+          document.write(key+' : '+this[key]+'<br>');
+        }
+      }
+      // 객체에 소속된 함수
+      coworkers.showAll();
+    </script>
+  </body>
+<html>

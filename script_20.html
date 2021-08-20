@@ -1,0 +1,78 @@
+<!-- script_20 객체 -->
+<!-- 서로 연관된 함수와 연관된 변수를 그룹핑해서 수납 -->
+<!-- 객체에 속해 있는 함수는 메소드 -->
+<!-- /**/ -->
+
+<!doctype html>
+<html>
+<head>
+  <title>WEB1 - JavaScript</title>
+  <meta charset="utf-8">
+  <script>
+    // function setColor(color){ // 겹치는 함수를 피하기위해
+    function LinksSetColor(color){
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+        alist[i].style.color = color;
+        i = i + 1;
+      }
+    }
+    function BodySetColor(color){
+      // var target = document.querySelector('body');
+      // target.style.color = color;
+      document.querySelector('body').style.color = color;
+    }
+    function BodySetBackgroundColor(color){
+      document.querySelector('body').style.backgroundColor = color;
+    }
+    function nightdayHandler(self){
+    var target = document.querySelector('body');
+    if(self.value === 'night'){
+      // target.style.backgroundColor = 'black';
+      BodySetBackgroundColor('black')
+      // 함수를 통해 이름을 부여하는 로직
+      // target.style.color = 'white';
+      BodySetColor('white')
+      self.value = 'day';
+      // 중복된 코드 함수
+      // var alist = document.querySelectorAll('a');
+      // var i = 0;
+      // while(i < alist.length){
+      //   alist[i].style.color = 'powderblue';
+      //   i = i + 1;
+      // }
+      // setColor('powderblue')
+      LinksSetColor('powderblue')
+    } else {
+      // target.style.backgroundColor = 'white';
+      BodySetBackgroundColor('white')
+      // target.style.color = 'black';
+      BodySetColor('black')
+      self.value = 'night';
+      // var alist = document.querySelectorAll('a');
+      // var i = 0;
+      // while(i < alist.length){
+      //   alist[i].style.color = 'blue';
+      //   i = i + 1;
+      // }
+      // setColor('blue')
+      LinksSetColor('blue')
+    }
+  }
+  </script>
+</head>
+  <body>
+    <h1><a href="0.index.html">WEB</a></h1>
+    <input id="night_day" type="button" value="night" onclick="
+      nightdayHandler(this);
+      ">
+      <ol>
+        <li><a href="1.html">HTML</a></li>
+        <li><a href="2.html">CSS</a></li>
+        <li><a href="3.html">JavaScript</a></li>
+      </ol>
+        <h2>JavaScript이란 무엇인가?</h2>
+        <p>JavaScript (/ˈdʒɑːvəˌskrɪpt/)[9], often abbreviated as JS, ia programming language that conforms to the ECMAScripspecification.[10] JavaScript is high-level, often just-in-timcompiled, and multi-paradigm. It has curly-bracket syntaxdynamic typing, prototype-based object-orientation, and firsclass functions.</p>
+  </body>
+</html>

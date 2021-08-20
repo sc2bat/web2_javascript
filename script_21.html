@@ -1,0 +1,41 @@
+<!-- object -->
+<!-- /*  */ -->
+
+<!-- 배열은 순서대로 -->
+<!-- var coworkers = ["유재석", "박명수", "정형돈"]
+undefined
+coworkers[0]
+"유재석"
+coworkers[1]
+"박명수" -->
+
+<!-- 객체는 순서와 관계없이 -->
+<!-- 이름을 부여한 수납공간 -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <style>
+    </style>
+  </head>
+  <body>
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script>
+      // 객체를 만들고 그 객체를 가져옴
+      var coworkers = {
+        "programmer":"유재석",
+        "designer":"박명수"
+      };
+      document.write("programmer : "+coworkers.programmer+"<br>");
+      document.write("designer : "+coworkers.designer+"<br>");
+      coworkers.bookkeeper = "정형돈";
+      document.write("bookkeeper : "+coworkers.bookkeeper+"<br>");
+      // .xxx 대신에 []로 감싸고 띄워쓰기
+      coworkers["data scientist"] = "노홍철";
+      document.write("data scientist : "+coworkers["data scientist"]+"<br>");
+    </script>
+  </body>
+<html>

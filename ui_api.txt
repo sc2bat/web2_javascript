@@ -1,0 +1,24 @@
+UI vs API
+
+User Interface
+
+Application Programming Interface
+
+웹페이지 내 태그를 추가하고 싶다면 document
+document으로 부족하다면 DOM
+
+웹브라우저 자체를 제어한다면 window
+
+웹페이지를 리로드하지 않고 정보를 변경하고자한다면 ajax
+
+웹페이지가 리로드되어도 유지되고 싶다면 cookie
+
+인터넷이 끊겨도 동작하는 웹페이지 offline web Application
+
+화상통신 webRTC
+
+음성 인식 및 음성 speech 라는 api
+
+3차원과 같은 게임 그래픽 webGL
+
+가상현실 webVR

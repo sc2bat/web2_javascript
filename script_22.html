@@ -1,0 +1,38 @@
+<!-- script_22 -->
+<!-- /*  */ -->
+<!-- 반복문을 통해서 생성된 객체 내의 데이터를 가져옴 -->
+<!-- javascript object iterate -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <style>
+    </style>
+  </head>
+  <body>
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script>
+      var coworkers = {
+        "programmer":"유재석",
+        "designer":"박명수"
+      };
+      document.write("programmer : "+coworkers.programmer+"<br>");
+      document.write("designer : "+coworkers.designer+"<br>");
+      coworkers.bookkeeper = "정형돈";
+      document.write("bookkeeper : "+coworkers.bookkeeper+"<br>");
+      coworkers["data scientist"] = "노홍철";
+      document.write("data scientist : "+coworkers["data scientist"]+"<br>");
+    </script>
+    <h2>Iterate</h2>
+    <script>
+      for(var key in coworkers) {
+        // document.write(key+'<br>');
+        // document.write(coworkers[key]+'<br>');
+        document.write(key+' : '+coworkers[key]+'<br>');        
+      }
+    </script>
+  </body>
+<html>
